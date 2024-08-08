@@ -16,7 +16,7 @@ export default function Home() {
       <Image src="/login.png" alt="login" width={554} height={832}/>
     </aside>
 
-    <section className="flex flex-col items-center gap-7">
+    <section className="flex flex-col w-full items-center gap-7">
     <svg width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="37.5" cy="37.5" r="37.5" fill="#E11D48"/>
     </svg>
@@ -25,28 +25,55 @@ export default function Home() {
 
     <Tabs defaultValue="entrar" className="w-[400px]">
       <TabsList className="grid w-full grid-cols-2">
-        <TabsTrigger value="entrar">entrar</TabsTrigger>
-        <TabsTrigger value="registrar">registrar</TabsTrigger>
+        <TabsTrigger value="entrar">Entrar</TabsTrigger>
+        <TabsTrigger value="registrar">Registrar</TabsTrigger>
       </TabsList>
       <TabsContent value="entrar">
 
         <form action="" className="space-y-8 p-4">
           <div>
-            <Label htmlFor="email">e-mail</Label>
+            <Label htmlFor="email">Email</Label>
             <Input id="email"/>
           </div>
 
           <div>
-            <Label htmlFor="senha">senha</Label>
+            <Label htmlFor="senha">Senha</Label>
             <Input type="password" id="senha"/>
           </div>
 
-          <Button type="submit">entrar</Button>
+          <div className="flex justify-center">
+            <Button type="submit">Entrar</Button>
+          </div>
         </form>
       </TabsContent>
 
       <TabsContent value="registrar">
-        <p>criar conta</p>
+      <form action="" className="space-y-8 p-4">
+          <div>
+            <Label htmlFor="nome">Nome</Label>
+            <Input id="nome"/>
+          </div>
+
+          <div>
+            <Label htmlFor="bio">Bio</Label>
+            <Input id="bio"/>
+          </div>
+
+          <div>
+            <Label htmlFor="email">Email</Label>
+            <Input id="email"/>
+          </div>
+
+          <div>
+            <Label htmlFor="senha">Senha</Label>
+            <Input type="password" id="senha"/>
+          </div>
+
+          <div className="flex justify-center">
+            <Button type="submit">Criar conta</Button>
+          </div>
+
+        </form>
       </TabsContent>
     </Tabs>
   
